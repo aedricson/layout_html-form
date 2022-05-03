@@ -16,12 +16,14 @@
     <form
       action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post"
     >
-      <div class="form__box personal__info">
+      <fieldset class="form__box">
+        <legend>Personal information</legend>
         <label class="form__field">
           Surname:
           <input
             type="text"
             name="surname"
+            autocomplete="off"
             required
           >
         </label>
@@ -30,6 +32,7 @@
           <input
             type="text"
             name="name"
+            autocomplete="off"
             required
           >
         </label>
@@ -58,14 +61,16 @@
             required
           >
         </label>
-      </div>
-      <div class="form__box registration">
+      </fieldset>
+      <fieldset class="form__box">
+        <legend>Registration</legend>
         <label class="form__field">
           E-mail:
           <input
             type="email"
             name="email"
             placeholder="email@example.com"
+            autocomplete="off"
             required
           >
         </label>
@@ -79,13 +84,78 @@
             required
           >
         </label>
-      </div>
-      <div class="form__box">
-
-      </div>
-      <div class="form__box">
-
-      </div>
+      </fieldset>
+      <fieldset class="form__box">
+        <legend>An intersting fact about you</legend>
+        <label class="form__field">
+          Do you love cats?
+          <input
+            type="radio"
+            name="cats"
+            value="yes"
+          >
+          Yes
+          <input
+            type="radio"
+            name="loveCats"
+            value="no"
+          >
+          No
+        </label>
+        <label class="form__field">
+          What is your favorite color?
+          <input
+            type="color"
+            name="color"
+          >
+        </label>
+        <label class="form__field">
+          What time do you go to bed?
+          <input
+            type="time"
+            name="goToBed"
+          >
+        </label>
+        <label class="form__field">
+          What are your favorite brand of cars?
+          <select name="brandOfCar" multiple>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="lada">Lada</option>
+          </select>
+        </label>
+        <label class="form__field">
+          How do you rate our work?
+          <input
+            type="range"
+            min="0"
+            max="40"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="form__box">
+        <legend>Additional info</legend>
+        <label class="form__field">
+          Comments:
+          <textarea
+            name="comments"
+            autocomplete="off"
+            cols="23"
+            rows="3"
+         ></textarea>
+        </label>
+        <label class="form__field">
+          Would you recommend us?
+          <select name="recomend">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      </fieldset>
+      <input
+        type="submit"
+        name="submit"
+      >
     </form>
   </body>
 </html>
